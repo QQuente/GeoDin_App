@@ -62,7 +62,7 @@ ui <- fluidPage(
         sidebarPanel(
           textInput("dbname", "Database Name", "geodin_bw12"),
           textInput("user", "User", "bialeks"),
-          passwordInput("password", "Password", "sebastian2023cdm"),
+          passwordInput("password", "Password", ""),
           actionButton("connect", "Connect to DB")
         ),
         mainPanel(textOutput("connection_status"))
