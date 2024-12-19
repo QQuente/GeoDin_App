@@ -494,7 +494,7 @@ server <- function(input, output, session) {
   observeEvent(input$addRowBtn, {
     req(input$longname, db_connection())
     
-    con_lite <- db_connection()
+    con_lite <- sqlite_connection()
     ssgk_key <- dbGetQuery(con_lite, paste0(
       "SELECT prj_id, locid FROM geodin_loc_ssgkrzt1 WHERE longname = '",
       input$longname, "'"
